@@ -11,7 +11,7 @@ const forecast = (lat, lon, callback) => {
         } else if (body.error) {
             callback('Check the location details!', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions + '. The current temperature is ' + body.current.temperature + ' degrees Celcius. It feels like ' + body.current.feelslike + ' degrees Celcius.')
+            callback(undefined, body.current.weather_descriptions + '. The current temperature is ' + body.current.temperature + ' degrees Celcius. It feels like ' + body.current.feelslike + ' degrees Celcius. Wind speed is ' + body.current.wind_speed + ' kmph.')
         }
     })
 }
